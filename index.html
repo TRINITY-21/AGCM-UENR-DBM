@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link href="fontawesome/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/style1.css">
+
+        <div class="containers">
+
+                <img src="media/output-onlinepngtools.png" alt="agcm logo" width="10%" height="10%"
+                        style="margin-left: 5%;margin-top: 1% ">
+                <h1 style="    float: right;
+               margin-right: 10%;
+               margin-top: 5%;
+               font-weight: bold;">AGCM UENR CHAPTER, SUNYANI</h1>
+        </div>
+        <hr style="margin-left: 5%;margin-right: 5%;">
+
+
+</head>
+
+<body>
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-8" style="    max-width: 62%;">
+                                        <h1 class="display-4">Membership Database</h1>
+                                </div>
+                                <div class="col-4"><i class="fas fa-folder-open fa-5x" style="color: #171717a3; "></i>
+                                </div>
+                                <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;SignIn, Search and Register Members. All Made
+                                        Easy.</p>
+                        </div>
+                </div>
+        </div>
+
+
+        <div id="" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="card" style="   
+                width:  130px;
+                margin-left: 40%;
+                border-radius: 100%;
+                background-color: transparent;">
+                        <div class="card-body">
+                                <center> <i class="fas fa-user-plus fa-5x" style="color: #171717a3;"></i></center>
+                        </div>
+                </div>
+                <form style="margin: 3%;" method="post" id="register">
+
+                        <div class="alert alert-danger" id="alert" style="display: none"></div>
+                        <div class="alert alert-success" id="alert2" style="display: none"></div>
+                        <div class="form-group row">
+                                <div class="col" style="padding-right: 0px;">
+                                        <input type="text" class="form-control" placeholder="First name" name="fname"
+                                                id="fname" required>
+                                </div>
+                                <div class="col" style="padding-left: 2px;">
+                                        <input type="text" class="form-control" placeholder="Last name" name="sname"
+                                                id="sname" required>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Othernames (optional)"
+                                        style="width: 70%;" name="othernames" id="othernames" required>
+                        </div>
+                        <div class="form-group">
+                                <input type="radio" name="sex" value="male" id="sex1">male &nbsp; 
+                                <input type="radio" name="sex" id="sex2" value="female">female
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" id="age" placeholder="age" style="width: 20%;"
+                                        required name="age" required>
+                        </div>
+
+                        <div class="form-group">
+
+                                <input type="email" class="form-control" id="email" placeholder="Email"
+                                        style="width: 80%;" name="email" required>
+
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" id="residence" placeholder="Fiapre"
+                                        style="width: 70%;" name="residence" required>
+                        </div>
+                        <div class="form-group">
+
+                                <input type="text" class="form-control" id="phone" placeholder="024 xxx xxxx"
+                                        style="width: 70%;" name="phone" required>
+                        </div>
+
+                        <div class="form-group ">
+
+                                <input type="text" class="form-control" id="programme" placeholder="Bsc. computer sci."
+                                        style="width: 80%;" name="programme" required>
+                        </div>
+
+                        <div class="form-group ">
+                                <input type="text" class="form-control" id="department" placeholder="Music department"
+                                        style="width: 70%;" name="department" required> 
+                        </div>
+                       
+                        <button type="reset" id="reset" class="btn btn-dark" style="border-bottom-left-radius: 0px;
+                                 border-top-right-radius: 0px;
+                                 border-bottom-right-radius: 10px;
+                                 border-top-left-radius: 10px;" value="reset">reset</button>
+                                 
+                        <button type="submit" id="submit2" class="btn btn-dark" style="border-bottom-left-radius: 0px;
+                                 border-top-right-radius: 0px;
+                                 border-bottom-right-radius: 10px;
+                                 border-top-left-radius: 10px;">register</button>
+
+
+                </form>
+        </div>
+        <div id="RmySidenav" class="Rsidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="RcloseNav()">&times;</a>
+
+                <div class="card" style="   
+                        width: 130px;
+                        margin-top: 10%;
+                        margin-left: 40%;
+                        border-radius: 100%;
+                        background-color: transparent;">
+                        <div class="card-body">
+                                <center> <i class="fas fa-users-cog fa-5x" style="color: #171717a3;"></i></center>
+                        </div>
+                </div>
+
+                <form class="signIn" style="margin-left: 8%; margin-top: 20%;">
+                        <div class="alert alert-danger" id="adminAlert" style="display: none; width: 80%;"></div>
+                        <div class="form-group" style="width: 80%; ">
+                                <label for="exampleInputEmail1">logIn ID </label>
+                                <input type="text" class="form-control" id="accessId" aria-describedby="emailHelp"
+                                        placeholder="ID" name="accessId" style="border-radius: 0px">
+                        </div>
+                        <div class="form-group" style="width: 80%">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="accessPassword" name="accessPassword"
+                                        placeholder="Password" style="border-radius: 0px">
+                        </div>
+                        <button type="submit" id="submit1" class="btn btn-dark" style="border-bottom-left-radius: 0px;
+                                border-top-right-radius: 0px;
+                                border-bottom-right-radius: 10px;
+                                border-top-left-radius: 10px;">SignIn</button>
+
+                </form>
+        </div>
+        <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <i class="fas fa-user-plus "
+                                style="top: 50%; left:5%; color: #171717a3;"> <small>Add Member </small><br>
+                                <small id="err" style="color: #d65959;font-size:16px;margin-left: 40%; "></small></i></span>
+                                
+               
+                <span style="font-size:30px;cursor:pointer; float: right;" onclick="RopenNav()"><i
+                                class="fas fa-users-cog"
+                                style="top: 50%;right: 5%;color: #171717a3;"><small>Adminstrator</small></i></span>
+
+                <center>
+                        <form method="POST">
+                                <div class="row search_btns">
+                                                <!-- <div class="col-2 search_butt1" style="padding-right: 0%">
+                                                                <button class="btn btn-dark search_butt" style="float: right; border: none;" id="search_butt1" value="100" >100</button>
+                                                                <button class="btn btn-dark search_butt"  style="float: right; margin-right: 3px; border: none;" id="search_butt2" value="200" >200</button>
+                                                        </div> -->
+                                        <div class="form-group col-8" style="padding-right: 0px; padding-left: 1.5%;">
+                                                <input type="sreach" class="form-control" id="search" name="search"
+                                                        aria-describedby="search"
+                                                        placeholder="name, department, progamme etc."
+                                                        style="border-radius: 0px; width: 80%">
+                                        </div>
+                                        <!-- <div class="col-2 search_butt1">
+                                                        <button class="btn btn-dark search_butt" style="float:left;  border: none;" id="search_butt3" value="300" >300</button>
+                                                        <button class="btn btn-dark search_butt"  style="float:left; margin-left: 3px; border: none;" id="search_butt4" value="400" >400</button>
+                                                </div> -->
+                                                <div class=" col-4 level">
+                                                                <select id="lev_option" class="form-control dark"  style="width: 80%; border-radius: 0%"> 
+                                                                        <option value="">choose level</option>
+                                                                        <option value="100">100</option>
+                                                                        <option value="200">200</option>
+                                                                        <option value="300">300</option>
+                                                                        <option value="400">400</option>
+                                                                </select>
+                                                        </div>
+                                </div>
+                        </form>
+                        <!-- <div class="level">
+                                <select id="lev_option" class="form-control dark"  style="width: 10%"> 
+                                        <option value="">choose level</option>
+                                        <option value="100">100</option>
+                                        <option value="200">200</option>
+                                        <option value="300">300</option>
+                                        <option value="400">400</option>
+                                </select>
+                        </div> -->
+                        <span id="find" class="w3-text-blue" style="display: none;text-align: right"></span>
+                        <table class="table table-striped table-dark" id="disp_tbl">
+                                <thead>
+                                        <tr>
+                                                <th scope="col">First Name</th>
+                                                <th scope="col">Last Name</th>
+                                                <th scope="col">Othernames</th>
+                                                <th scope="col">Sex</th>
+                                                <th scope="col">Age</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Residence</th>
+                                                <th scope="col">Programme</th>
+                                                <th scope="col">Department</th>
+                                                <th scope="col">Phone</th>
+
+                                        </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                        </table>
+                </center>
+        </div>
+
+        <script src="javascript/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="bootstrap/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="javascript/jquery-3.4.1.min.js"></script>
+        <script src="javascript/javascript1.js"></script>
+        <script src="javascript/json.js"></script>
+
+
+</body>
+
+</html>
